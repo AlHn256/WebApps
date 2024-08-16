@@ -50,3 +50,28 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+MVC/DemoWebApiSST/.vs/
+MVC/DemoWebApiSST/Cors/obj/
+MVC/Diplom (MVC Quiestion )/QuestionSea/QuestionSee/Migrations/
+MVC/Diplom (MVC Quiestion )/QuestionSea/QuestionSee/wwwroot/
+MVC/MVC/MVC/bin/
+MVC/MVC/MVC/obj/
+MVC/MVC/MVC/wwwroot/
+MVC/Test/MVCWebTestApl/MVCWebTestApl/obj/
+MVC/UnitTest/UnitTest/obj/
+MVC/UnitTest/UnitTest/wwwroot/lib/
+MVC/UnitTest/UnitTestApp.Tests/obj/
+MVC/UnitTest/XUnitTestApp.Tests/bin/
+MVC/UnitTest/XUnitTestApp.Tests/obj
+MVC/MVC/.vs/MVC/v16/
+MVC/MVC/.vs/MVC/v17/
+MVC/Test/MVCWebTestApl/.vs/
+MVC/Test/MVCWebTestApl/MVCWebTestApl/bin/
+MVC/Test/MVCWebTestApl/MVCWebTestApl/wwwroot/
+MVC/UnitTest/UnitTest/obj/
+MVC/UnitTest/UnitTest/wwwroot/
+MVC/UnitTest/XUnitTestApp.Tests/obj/
+MVC/UnitTest/UnitTest/bin/
+MVC/DemoWebApiSST/Cors/wwwroot/
+MVC/DemoWebApiSST/Cors/bin/
+MVC/MVC/.vs/

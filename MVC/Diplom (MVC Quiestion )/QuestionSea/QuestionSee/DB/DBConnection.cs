@@ -1,0 +1,31 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace QuestionSee.DB
+{
+    public class DBConnection: DbContext
+    {
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Question> Questions { get; set; }
+
+        public DbSet<Answer> Answers { get; set; }
+
+        public DbSet<GlobalChecker> Globals { get; set; }
+
+        //public FoxContextDb()
+        //{
+        //    Database.EnsureCreated();
+        //}
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer("Server=vtest.fvds.ru;Database=questionsee;Uid=newuser;Pwd=qwertypassword;CharSet=utf8;");
+            optionsBuilder.UseSqlServer(@"Data Source=PCI\MYSERV;Initial Catalog=QuestionBd;Integrated Security=True");
+        }
+    }
+}

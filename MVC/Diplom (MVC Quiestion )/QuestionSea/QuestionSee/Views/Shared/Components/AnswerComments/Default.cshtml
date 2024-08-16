@@ -1,0 +1,59 @@
+﻿@{
+    QuestionSee.DB.Answer[] answer = Model.answer;
+    QuestionSee.DB.User user = Model.user;
+    bool isthebest = Model.currentU;
+}
+
+
+<div class="AnswersFlow">
+
+    @foreach (var element in Model.answer)
+    {
+        <div></div>
+        <hr style="border-color:black;" />
+
+        <div class="@(element.BestAnswer ? "AnswerBlock winer" : "AnswerBlock")">
+
+            <div>@Html.Raw(element.AnswerText)</div>
+            <p>@element.Rating</p>
+            <p>@element.Like</p>
+            <p>@element.Dislike</p>
+            <p>@element.Date</p>
+            <p>@element.Deleted</p>
+            <p>UserId @element.UserId</p>
+
+            @if (isthebest == false)
+            {
+
+            }
+            else
+            {
+                <div class="BestAnswerisTrue">
+                    <form method="post" action="/Home/BestAnswer">
+                        <input hidden type="text" name="BestAnswerId" value="@element.id">
+                        <input type="submit" value="Лучший ответ">
+                    </form>
+                </div>
+            }
+          
+            @if (user.Admin == false)
+            {
+
+            }
+            else
+            {
+                <div class="MiniPanel">
+                    <form method="post" action="/Home/AdminActions">
+                        <select name="SelectedItem">
+                            <option value="User ban">Забанить пользователя</option>
+                            <option value="Delete this answer">Удалить ответ</option>
+                        </select>
+                        <input hidden type="text" name="AnswerId" value="@element.id">
+                        <input hidden type="text" name="UserId" value="@element.UserId">
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+            }
+        </div>
+    }
+</div>

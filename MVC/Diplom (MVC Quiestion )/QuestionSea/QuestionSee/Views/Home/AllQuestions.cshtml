@@ -1,0 +1,23 @@
+﻿@model IEnumerable<QuestionSee.DB.Question>
+@{
+    ViewData["Title"] = "AllQuestions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="AllQuestions">
+        <div class="QuestionSearch">
+            <form method="post">
+                <input type="text" name="SearchByHeader" /> Поиск по названию
+                <input type="text" name="SearchByTags" /> Поиск по тегам
+                <input type="submit" value="Найти" />
+            </form>
+        </div>
+        
+        @await Component.InvokeAsync("QuestionsFlow")
+
+    </div>
+
+</body>
+

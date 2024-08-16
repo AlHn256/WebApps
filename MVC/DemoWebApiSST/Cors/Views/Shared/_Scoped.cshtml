@@ -1,0 +1,11 @@
+﻿@inject Cors.IScopedService Scoped
+
+<h2>From partial: @Scoped.GetGuid()</h2>
+
+<hr>
+@using (Html.BeginForm())
+{
+    <h3>From partial: </h3>
+    <input type="text" name="FirstName" />
+    <input type="submit" name="Submit" />
+}

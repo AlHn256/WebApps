@@ -1,0 +1,17 @@
+﻿@model string
+<h1>Scoped Guid : @Model</h1>
+<partial name="_Scoped" />
+
+@using (Html.BeginForm("MyAction", "Home", FormMethod.Post))
+{
+    <input type="text" name="product" />
+    <br />
+    <button name="action" value="add">Добавить</button>
+    <button name="action" value="delete">Удалить</button>
+}
+<hr>
+@using (Html.BeginForm())
+{
+    <input type="text" name="FirstName" />
+    <input type="submit" name="Submit" />
+}

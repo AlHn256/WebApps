@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>HTML Document</title>
+<script>
+    function sendrequest() {
+		var data = new Object();
+		data.request = "hello world";
+		data.response = "";
+		var dataJson = JSON.stringify(data);
+		alert(dataJson);
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", 'https://localhost:5001/api/values', true);
+		//Передает правильный заголовок в запросе
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+			if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+				alert(this.responseText);
+				
+			}
+		}
+		xhr.send(dataJson); 
+		// xhr.send('string'); 
+		// xhr.send(new Blob()); 
+		// xhr.send(new Int8Array()); 
+		// xhr.send({ form: 'data' }); 
+		// xhr.send(document);
+   
+    }
+  </script>
+</head>
+<body>
+  <input type="button" onclick="sendrequest()" value="НАЖМИ МЕНЯ"/>
+</body>
+</button>
+   </body>
+</html>

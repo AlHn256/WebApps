@@ -1,0 +1,50 @@
+﻿    @{
+        QuestionSee.DB.User[] users = Model.users;
+        QuestionSee.DB.User currentuser = Model.currentuser;
+    }
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>UsersList</title>
+    </head>
+    <body>
+            <div class="Allusers">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nickname</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var element in Model.users)
+
+                {
+                <tr>
+                    <th scope="row">1</th>
+                    <td><a href="/Home/CheckRandomUserInfo/@element.id">@element.Nickname</a></td>
+                    <td>@element.Email</td>
+                    @if (currentuser.Admin == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <td>
+                            <form method="post" action="/Home/AdminActions">
+                    <input hidden type="text" name="UserId" value="@element.id">
+                    <input type="submit" value="Забанить">
+                              </form>
+                        </td>
+                    }
+
+                </tr>
+                }
+
+
+            </tbody>
+        </table>
+            </div>
+    </body>
+

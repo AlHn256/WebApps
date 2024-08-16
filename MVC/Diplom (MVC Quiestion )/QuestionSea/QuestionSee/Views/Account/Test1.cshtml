@@ -1,0 +1,12 @@
+﻿@{ 
+    Layout = null;
+}
+<small>@Model</small>
+
+@if (Model == "")
+{
+    <script>
+        //$("#postform").submit();
+        window.location.href = "/";
+    </script>
+}
