@@ -75,3 +75,9 @@ MVC/UnitTest/UnitTest/bin/
 MVC/DemoWebApiSST/Cors/wwwroot/
 MVC/DemoWebApiSST/Cors/bin/
 MVC/MVC/.vs/
+RemoteService/Client/obj
+RemoteService/Client/bin
+RemoteService/.vs
+RemoteService/RemoteService/obj
+RemoteService/SummatorHost/bin
+RemoteService/SummatorHost/obj
