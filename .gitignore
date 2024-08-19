@@ -102,6 +102,14 @@ WCF/ServiceSummator/Summator/SummatorHost/obj
 WCF/ServiceSummator/Summator/SummatorHost/bin
 WCF/WebServiceSummator/WebService/packages
 WebApi/.vs/WebAPI/DesignTimeBuild/.dtbcache
-WebApi/WebAPI/bin/Debug/netcoreapp2.2/WebAPI.runtimeconfig.dev.json
-WebApi/WebAPI/obj/Debug/netcoreapp2.2/Razor/Pages/_ViewStart.g.cshtml.cs
-WebApi/WebAPI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css
+WebApi/WebAPI/bin
+WebApi/WebAPI/obj
+WPF/MyBrowser/.vs
+WPF/WpfApplication1/WpfApplication1/.vs
+WPF/WpfApplication1/WpfApplication1/WpfApplication1/bin
+WPF/WpfApplication1/WpfApplication1/WpfApplication1/obj
+WPF/Wpfbinding zTimer/.vs
+WPF/Wpfbinding zTimer/WpfApplication1/bin
+WPF/Wpfbinding zTimer/WpfApplication1/obj
+WPF/WPFTextEdit/.vs
+WPF/WPFTextEdit/TextEdit/obj
