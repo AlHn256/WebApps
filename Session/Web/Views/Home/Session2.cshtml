@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Session2";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<div>
+    @($"SessionId: {Session.SessionID}")
+</div>
+<div>
+    @using (Html.BeginForm("Session3", "Home", FormMethod.Post))
+    {
+        <h3>@($"Добрый день {Session["userName"]}! Что будете заказывать?")</h3>
+
+        <input type="text" name="foodName" placeholder="..." />
+        <input type="submit" value="Продолжить" />
+    }
+</div>
+

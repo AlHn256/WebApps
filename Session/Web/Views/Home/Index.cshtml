@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<h2>HTTP cессия. Session. Состояние сеанса. Работа с сессиями на ASP.NET MVC</h2>
+
+<div>
+    <a href="@Url.RouteUrl("Default", new { controller = "Home", action = "Forms1"})">Скрытые поля на HTML-форме (Hidden form fields)</a>
+    <a href="@Url.RouteUrl("Default", new { controller = "Home", action = "Cookies1"})">Куки (Cookies)</a>
+    <a href="@Url.RouteUrl("Default", new { controller = "Home", action = "Session1"})">Сессия (Session, Session State)</a>
+</div>
+

@@ -1,0 +1,8 @@
+﻿
+@{
+    ViewBag.Title = "Forms3";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<div>@($"Уважаемый {ViewBag.UserName}! Ваш заказ {ViewBag.FoodName} будет готов через {new Random().Next(1, 10)} часов")</div>
+

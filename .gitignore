@@ -81,3 +81,7 @@ RemoteService/.vs
 RemoteService/RemoteService/obj
 RemoteService/SummatorHost/bin
 RemoteService/SummatorHost/obj
+Session/.vs
+Session/Web/bin
+Session/Web/obj
+Session/packages

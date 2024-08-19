@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Forms2";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("Forms3", "Home", FormMethod.Post))
+    {
+        <h3>@($"Добрый день {ViewBag.UserName}! Что будете заказывать?")</h3>
+        <input type="hidden" name="userName" value="@ViewBag.UserName"/>
+        <input type="text" name="foodName" placeholder="..." />
+        <input type="submit" value="Продолжить" />
+    }
+</div>
+

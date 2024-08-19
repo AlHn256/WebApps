@@ -1,0 +1,8 @@
+﻿
+@{
+    ViewBag.Title = "Cookies3";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<div>@($"Уважаемый {HttpUtility.UrlDecode(Request.Cookies["userName"]?.Value)}! Ваш заказ {HttpUtility.UrlDecode(Request.Cookies["foodName"]?.Value)} будет готов через {new Random().Next(1, 10)} часов")</div>
+

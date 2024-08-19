@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Session3";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+<div>
+    @($"Элементов в сессии: {Session.Count}")
+</div>
+<div>
+    @($"SessionId: {Session.SessionID}")
+</div>
+<div>@($"Уважаемый {Session["userName"]}! Ваш заказ {Session["foodName"]} будет готов через {new Random().Next(1, 10)} часов")</div>
+

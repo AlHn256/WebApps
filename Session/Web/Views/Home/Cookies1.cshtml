@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Cookies1";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("Cookies2", "Home", FormMethod.Post))
+    {
+        <h3>Заказ блюда</h3>
+        <input type="text" name="userName" placeholder="Представьтесь, пожалуйста..." />
+        <input type="submit" value="Продолжить" />
+    }
+</div>
+
