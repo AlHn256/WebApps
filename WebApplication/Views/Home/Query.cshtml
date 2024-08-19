@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Query";
+}
+<h2>
+    @ViewBag.Title.
+    <br>
+    <br>
+    <b>SELECT RQuest:</b>
+    <br>
+</h2>
+<h3>@ViewBag.Message</h3>
+
+
+@{
+    int number = 23;
+    string message = "number = " + number;
+}
+<p>Message: @message</p>
+<p>@DateTime.Now</p>
+<hr />
+@using (Html.BeginForm("SqlQuery", "Home", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+    <table>
+        <tr>
+            <td><p>ConnectionString :</p></td>
+            <td>
+                <textarea maxlength="1024" id="ConnectionString" name="ConnectionString" class="form-control ng-valid ng-dirty">ConnectionString</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><p>QueryString :</p></td>
+            <td>
+                <textarea maxlength="1024" id="QueryString" name="QueryString" class="form-control ng-valid ng-dirty" rows="3" style="margin: 0px 43px 0px 0px;">SELECT * FROM [table]</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><p>Порт :</p></td>
+            <td><input type="number" name="Port" value="9111" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Отправить" /> </td>
+            <td></td>
+        </tr>
+    </table>
+    <p>Message2: @message</p>
+}
+
+<p>Query connection.</p>

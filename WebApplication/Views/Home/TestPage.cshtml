@@ -1,0 +1,84 @@
+﻿@model  WebApplication.Models.Product
+@Model Razor.Models
+@{
+    Layout = "~/Views/Shared/_LayoutRazor.cshtml";
+    ViewData["Message"] = "Razore TestMessage";
+    ViewData["Title"] = "Razor Title";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <h2>@ViewData["Title"].</h2>
+    <h3>@ViewData["Message"]</h3>
+    <hr />
+    <div>
+        <h3>@ViewBag.Message</h3>
+        <h3>@Model.Id</h3>
+        <h3>@Model.Name</h3>
+        <h3>@Model.Price</h3>
+    </div>
+
+    <div>
+        <h3>В списке ViewBag.Countries @ViewBag.Countries.Count элемента:</h3>
+
+        @foreach (string country in ViewBag.Countries)
+        {
+            <p>@country</p>
+        }
+    </div>
+    <div>
+        <h3>В списке ViewBag.Productes @ViewBag.Productes.Count элемента:</h3>
+        @foreach (var product in ViewBag.Productes)
+        {
+            <p>Id @product.Id</p>
+            <p>Name @product.Name</p>
+            <p>Price @product.Price</p>
+        }
+    </div>
+    @{
+        string head = "Privet mir";
+        bool check = true;
+        int x = 5;
+    }
+
+    <b>
+        @if (check)
+        {
+            <p>@head</p>
+        }
+        else
+        {
+            <p>ElseTestElse</p>
+        }
+        @switch (x)
+        {
+            case 5:
+                <h3>@(x * x + x)</h3>
+                break;
+            case 6:
+                <h4>
+                    @(x + x / 2)
+                </h4>
+                break;
+            default:
+                <h1>999</h1>
+                break;
+        }
+    </b>
+    <h2>Function</h2>
+    @functions{
+        public int GetFactorial(int n)
+        {
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+                result *= i;
+            return result;
+        }
+    }
+
+    <div>Factorial 8 = @GetFactorial(8)</div>
+</body>
+</html>

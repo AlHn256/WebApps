@@ -113,3 +113,8 @@ WPF/Wpfbinding zTimer/WpfApplication1/bin
 WPF/Wpfbinding zTimer/WpfApplication1/obj
 WPF/WPFTextEdit/.vs
 WPF/WPFTextEdit/TextEdit/obj
+WebApplication/.vs/WebApplication/v16
+WebApplication/bin
+WebApplication/obj
+WebApplication/packages
+WebApplication/.vs
